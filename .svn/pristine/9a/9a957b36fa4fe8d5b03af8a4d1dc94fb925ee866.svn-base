@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CST.Selector.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="10.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="CSTSelectorStoreContainer">
+          <EntitySet Name="FG_PUBLIC_CAR_VW" EntityType="CST.Selector.Store.FG_PUBLIC_CAR_VW" store:Type="Tables" store:Schema="SYSADM" store:Name="FG_PUBLIC_CAR_VW">
+            <DefiningQuery>SELECT 
+      "FG_PUBLIC_CAR_VW"."FG_CAR_CD" AS "FG_CAR_CD", 
+      "FG_PUBLIC_CAR_VW"."FG_MAKE_CD" AS "FG_MAKE_CD", 
+      "FG_PUBLIC_CAR_VW"."MAKE" AS "MAKE", 
+      "FG_PUBLIC_CAR_VW"."FG_YEAR_CD" AS "FG_YEAR_CD", 
+      "FG_PUBLIC_CAR_VW"."FG_MODEL_CD" AS "FG_MODEL_CD", 
+      "FG_PUBLIC_CAR_VW"."MODEL" AS "MODEL", 
+      "FG_PUBLIC_CAR_VW"."FG_BODY_CD" AS "FG_BODY_CD", 
+      "FG_PUBLIC_CAR_VW"."BODY" AS "BODY", 
+      "FG_PUBLIC_CAR_VW"."FG_CATALOG_CD" AS "FG_CATALOG_CD", 
+      "FG_PUBLIC_CAR_VW"."FG_CATALOG_SETID" AS "FG_CATALOG_SETID", 
+      "FG_PUBLIC_CAR_VW"."FG_CATALOG_DESCRIPTION" AS "FG_CATALOG_DESCRIPTION", 
+      "FG_PUBLIC_CAR_VW"."FG_PROD_CD" AS "FG_PROD_CD", 
+      "FG_PUBLIC_CAR_VW"."FG_PROD_SETID" AS "FG_PROD_SETID"
+      FROM "SYSADM"."FG_PUBLIC_CAR_VW" "FG_PUBLIC_CAR_VW"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FG_SEL_CAR_VW" EntityType="CST.Selector.Store.FG_SEL_CAR_VW" store:Type="Tables" store:Schema="SYSADM" store:Name="FG_SEL_CAR_VW">
+            <DefiningQuery>SELECT 
+      "FG_SEL_CAR_VW"."FG_CAR_CD" AS "FG_CAR_CD", 
+      "FG_SEL_CAR_VW"."FG_MAKE_CD" AS "FG_MAKE_CD", 
+      "FG_SEL_CAR_VW"."MAKE" AS "MAKE", 
+      "FG_SEL_CAR_VW"."FG_YEAR_CD" AS "FG_YEAR_CD", 
+      "FG_SEL_CAR_VW"."FG_MODEL_CD" AS "FG_MODEL_CD", 
+      "FG_SEL_CAR_VW"."MODEL" AS "MODEL", 
+      "FG_SEL_CAR_VW"."FG_BODY_CD" AS "FG_BODY_CD", 
+      "FG_SEL_CAR_VW"."BODY" AS "BODY", 
+      "FG_SEL_CAR_VW"."FG_CATALOG_CD" AS "FG_CATALOG_CD", 
+      "FG_SEL_CAR_VW"."FG_CATALOG_SETID" AS "FG_CATALOG_SETID", 
+      "FG_SEL_CAR_VW"."FG_CATALOG_DESCRIPTION" AS "FG_CATALOG_DESCRIPTION", 
+      "FG_SEL_CAR_VW"."FG_PROD_CD" AS "FG_PROD_CD", 
+      "FG_SEL_CAR_VW"."FG_PROD_SETID" AS "FG_PROD_SETID"
+      FROM "SYSADM"."FG_SEL_CAR_VW" "FG_SEL_CAR_VW"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FG_SEL_INTR_VW" EntityType="CST.Selector.Store.FG_SEL_INTR_VW" store:Type="Views" store:Schema="SYSADM" store:Name="FG_SEL_INTR_VW">
+            <DefiningQuery>SELECT 
+      "FG_SEL_INTR_VW"."FG_CAR_CD" AS "FG_CAR_CD", 
+      "FG_SEL_INTR_VW"."FG_MAKE_CD" AS "FG_MAKE_CD", 
+      "FG_SEL_INTR_VW"."MAKE" AS "MAKE", 
+      "FG_SEL_INTR_VW"."FG_YEAR_CD" AS "FG_YEAR_CD", 
+      "FG_SEL_INTR_VW"."FG_MODEL_CD" AS "FG_MODEL_CD", 
+      "FG_SEL_INTR_VW"."MODEL" AS "MODEL", 
+      "FG_SEL_INTR_VW"."FG_BODY_CD" AS "FG_BODY_CD", 
+      "FG_SEL_INTR_VW"."BODY" AS "BODY", 
+      "FG_SEL_INTR_VW"."FG_CATALOG_CD" AS "FG_CATALOG_CD", 
+      "FG_SEL_INTR_VW"."FG_CATALOG_DESCRIPTION" AS "FG_CATALOG_DESCRIPTION", 
+      "FG_SEL_INTR_VW"."PATTERN_PROD_CD" AS "PATTERN_PROD_CD", 
+      "FG_SEL_INTR_VW"."PATTERN_DESCR" AS "PATTERN_DESCR", 
+      "FG_SEL_INTR_VW"."FG_CAR_CHAR_VALUE_CD" AS "FG_CAR_CHAR_VALUE_CD", 
+      "FG_SEL_INTR_VW"."INTERIOR_COLOR" AS "INTERIOR_COLOR"
+      FROM "SYSADM"."FG_SEL_INTR_VW" "FG_SEL_INTR_VW"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FG_SEL_PATTERN_VW" EntityType="CST.Selector.Store.FG_SEL_PATTERN_VW" store:Type="Views" store:Schema="SYSADM" store:Name="FG_SEL_PATTERN_VW">
+            <DefiningQuery>SELECT 
+      "FG_SEL_PATTERN_VW"."FG_CAR_CD" AS "FG_CAR_CD", 
+      "FG_SEL_PATTERN_VW"."FG_MAKE_CD" AS "FG_MAKE_CD", 
+      "FG_SEL_PATTERN_VW"."MAKE" AS "MAKE", 
+      "FG_SEL_PATTERN_VW"."FG_YEAR_CD" AS "FG_YEAR_CD", 
+      "FG_SEL_PATTERN_VW"."FG_MODEL_CD" AS "FG_MODEL_CD", 
+      "FG_SEL_PATTERN_VW"."MODEL" AS "MODEL", 
+      "FG_SEL_PATTERN_VW"."FG_BODY_CD" AS "FG_BODY_CD", 
+      "FG_SEL_PATTERN_VW"."BODY" AS "BODY", 
+      "FG_SEL_PATTERN_VW"."FG_CATALOG_CD" AS "FG_CATALOG_CD", 
+      "FG_SEL_PATTERN_VW"."FG_CATALOG_DESCRIPTION" AS "FG_CATALOG_DESCRIPTION", 
+      "FG_SEL_PATTERN_VW"."PATTERN_PROD_CD" AS "PATTERN_PROD_CD", 
+      "FG_SEL_PATTERN_VW"."PATTERN_DESCR" AS "PATTERN_DESCR", 
+      "FG_SEL_PATTERN_VW"."FG_AIRBAGS_DESC" AS "FG_AIRBAGS_DESC", 
+      "FG_SEL_PATTERN_VW"."FG_TRIM_LEVEL_DESC" AS "FG_TRIM_LEVEL_DESC", 
+      "FG_SEL_PATTERN_VW"."DRAWING_IMAGE_ID" AS "DRAWING_IMAGE_ID"
+      FROM "SYSADM"."FG_SEL_PATTERN_VW" "FG_SEL_PATTERN_VW"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FG_SEL_RECOM_VW" EntityType="CST.Selector.Store.FG_SEL_RECOM_VW" store:Type="Views" store:Schema="SYSADM" store:Name="FG_SEL_RECOM_VW">
+            <DefiningQuery>SELECT 
+      "FG_SEL_RECOM_VW"."FG_CAR_CD" AS "FG_CAR_CD", 
+      "FG_SEL_RECOM_VW"."FG_MAKE_CD" AS "FG_MAKE_CD", 
+      "FG_SEL_RECOM_VW"."MAKE" AS "MAKE", 
+      "FG_SEL_RECOM_VW"."FG_YEAR_CD" AS "FG_YEAR_CD", 
+      "FG_SEL_RECOM_VW"."FG_MODEL_CD" AS "FG_MODEL_CD", 
+      "FG_SEL_RECOM_VW"."MODEL" AS "MODEL", 
+      "FG_SEL_RECOM_VW"."FG_BODY_CD" AS "FG_BODY_CD", 
+      "FG_SEL_RECOM_VW"."BODY" AS "BODY", 
+      "FG_SEL_RECOM_VW"."FG_CATALOG_CD" AS "FG_CATALOG_CD", 
+      "FG_SEL_RECOM_VW"."FG_CATALOG_DESCRIPTION" AS "FG_CATALOG_DESCRIPTION", 
+      "FG_SEL_RECOM_VW"."PATTERN_PROD_CD" AS "PATTERN_PROD_CD", 
+      "FG_SEL_RECOM_VW"."PATTERN_DESCR" AS "PATTERN_DESCR", 
+      "FG_SEL_RECOM_VW"."FG_CAR_CHAR_VALUE_CD" AS "FG_CAR_CHAR_VALUE_CD", 
+      "FG_SEL_RECOM_VW"."INTERIOR_COLOR" AS "INTERIOR_COLOR", 
+      "FG_SEL_RECOM_VW"."FG_PROD_CD" AS "FG_PROD_CD", 
+      "FG_SEL_RECOM_VW"."COLOR_CODE" AS "COLOR_CODE", 
+      "FG_SEL_RECOM_VW"."COLOR_DESCRIPTION" AS "COLOR_DESCRIPTION", 
+      "FG_SEL_RECOM_VW"."PROD_DESCR" AS "PROD_DESCR", 
+      "FG_SEL_RECOM_VW"."ADVICE" AS "ADVICE"
+      FROM "SYSADM"."FG_SEL_RECOM_VW" "FG_SEL_RECOM_VW"</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SYSADM.FG_PUBLIC_CAR_VW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="FG_PUBLIC_CAR_VW">
+          <Key>
+            <PropertyRef Name="FG_CAR_CD" />
+            <PropertyRef Name="FG_MAKE_CD" />
+            <PropertyRef Name="FG_YEAR_CD" />
+            <PropertyRef Name="FG_MODEL_CD" />
+            <PropertyRef Name="FG_BODY_CD" />
+            <PropertyRef Name="FG_CATALOG_CD" />
+            <PropertyRef Name="FG_CATALOG_SETID" />
+            <PropertyRef Name="FG_PROD_CD" />
+            <PropertyRef Name="FG_PROD_SETID" />
+          </Key>
+          <Property Name="FG_CAR_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="FG_MAKE_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="MAKE" Type="varchar2" MaxLength="100" />
+          <Property Name="FG_YEAR_CD" Type="number" Nullable="false" Precision="5" Scale="1" />
+          <Property Name="FG_MODEL_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="MODEL" Type="varchar2" MaxLength="100" />
+          <Property Name="FG_BODY_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="BODY" Type="varchar2" MaxLength="100" />
+          <Property Name="FG_CATALOG_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="FG_CATALOG_SETID" Type="varchar2" Nullable="false" MaxLength="5" />
+          <Property Name="FG_CATALOG_DESCRIPTION" Type="varchar2" MaxLength="100" />
+          <Property Name="FG_PROD_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="FG_PROD_SETID" Type="varchar2" Nullable="false" MaxLength="5" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SYSADM.FG_SEL_CAR_VW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="FG_SEL_CAR_VW">
+          <Key>
+            <PropertyRef Name="FG_CAR_CD" />
+            <PropertyRef Name="FG_MAKE_CD" />
+            <PropertyRef Name="FG_YEAR_CD" />
+            <PropertyRef Name="FG_MODEL_CD" />
+            <PropertyRef Name="FG_BODY_CD" />
+            <PropertyRef Name="FG_CATALOG_CD" />
+            <PropertyRef Name="FG_CATALOG_SETID" />
+            <PropertyRef Name="FG_PROD_CD" />
+            <PropertyRef Name="FG_PROD_SETID" />
+          </Key>
+          <Property Name="FG_CAR_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="FG_MAKE_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="MAKE" Type="varchar2" MaxLength="100" />
+          <Property Name="FG_YEAR_CD" Type="number" Nullable="false" Precision="5" Scale="1" />
+          <Property Name="FG_MODEL_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="MODEL" Type="varchar2" MaxLength="100" />
+          <Property Name="FG_BODY_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="BODY" Type="varchar2" MaxLength="100" />
+          <Property Name="FG_CATALOG_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="FG_CATALOG_SETID" Type="varchar2" Nullable="false" MaxLength="5" />
+          <Property Name="FG_CATALOG_DESCRIPTION" Type="varchar2" MaxLength="100" />
+          <Property Name="FG_PROD_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="FG_PROD_SETID" Type="varchar2" Nullable="false" MaxLength="5" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SYSADM.FG_SEL_INTR_VW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="FG_SEL_INTR_VW">
+          <Key>
+            <PropertyRef Name="FG_CAR_CD" />
+            <PropertyRef Name="FG_MAKE_CD" />
+            <PropertyRef Name="FG_YEAR_CD" />
+            <PropertyRef Name="FG_MODEL_CD" />
+            <PropertyRef Name="FG_BODY_CD" />
+            <PropertyRef Name="FG_CATALOG_CD" />
+            <PropertyRef Name="FG_CAR_CHAR_VALUE_CD" />
+          </Key>
+          <Property Name="FG_CAR_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="FG_MAKE_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="MAKE" Type="varchar2" MaxLength="100" />
+          <Property Name="FG_YEAR_CD" Type="number" Nullable="false" Precision="5" Scale="1" />
+          <Property Name="FG_MODEL_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="MODEL" Type="varchar2" MaxLength="100" />
+          <Property Name="FG_BODY_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="BODY" Type="varchar2" MaxLength="100" />
+          <Property Name="FG_CATALOG_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="FG_CATALOG_DESCRIPTION" Type="varchar2" MaxLength="100" />
+          <Property Name="PATTERN_PROD_CD" Type="varchar2" MaxLength="30" />
+          <Property Name="PATTERN_DESCR" Type="varchar2" MaxLength="500" />
+          <Property Name="FG_CAR_CHAR_VALUE_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="INTERIOR_COLOR" Type="varchar2" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SYSADM.FG_SEL_PATTERN_VW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="FG_SEL_PATTERN_VW">
+          <Key>
+            <PropertyRef Name="FG_CAR_CD" />
+            <PropertyRef Name="FG_MAKE_CD" />
+            <PropertyRef Name="FG_YEAR_CD" />
+            <PropertyRef Name="FG_MODEL_CD" />
+            <PropertyRef Name="FG_BODY_CD" />
+            <PropertyRef Name="FG_CATALOG_CD" />
+            <PropertyRef Name="PATTERN_PROD_CD" />
+          </Key>
+          <Property Name="FG_CAR_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="FG_MAKE_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="MAKE" Type="varchar2" MaxLength="100" />
+          <Property Name="FG_YEAR_CD" Type="number" Nullable="false" Precision="5" Scale="1" />
+          <Property Name="FG_MODEL_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="MODEL" Type="varchar2" MaxLength="100" />
+          <Property Name="FG_BODY_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="BODY" Type="varchar2" MaxLength="100" />
+          <Property Name="FG_CATALOG_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="FG_CATALOG_DESCRIPTION" Type="varchar2" MaxLength="100" />
+          <Property Name="PATTERN_PROD_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="PATTERN_DESCR" Type="varchar2" MaxLength="500" />
+          <Property Name="FG_AIRBAGS_DESC" Type="varchar2" />
+          <Property Name="FG_TRIM_LEVEL_DESC" Type="varchar2" />
+          <Property Name="DRAWING_IMAGE_ID" Type="number" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SYSADM.FG_SEL_RECOM_VW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="FG_SEL_RECOM_VW">
+          <Key>
+            <PropertyRef Name="FG_CAR_CD" />
+            <PropertyRef Name="FG_MAKE_CD" />
+            <PropertyRef Name="FG_YEAR_CD" />
+            <PropertyRef Name="FG_MODEL_CD" />
+            <PropertyRef Name="FG_BODY_CD" />
+            <PropertyRef Name="FG_CATALOG_CD" />
+            <PropertyRef Name="FG_CAR_CHAR_VALUE_CD" />
+            <PropertyRef Name="FG_PROD_CD" />
+            <PropertyRef Name="COLOR_CODE" />
+          </Key>
+          <Property Name="FG_CAR_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="FG_MAKE_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="MAKE" Type="varchar2" MaxLength="100" />
+          <Property Name="FG_YEAR_CD" Type="number" Nullable="false" Precision="5" Scale="1" />
+          <Property Name="FG_MODEL_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="MODEL" Type="varchar2" MaxLength="100" />
+          <Property Name="FG_BODY_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="BODY" Type="varchar2" MaxLength="100" />
+          <Property Name="FG_CATALOG_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="FG_CATALOG_DESCRIPTION" Type="varchar2" MaxLength="100" />
+          <Property Name="PATTERN_PROD_CD" Type="varchar2" MaxLength="30" />
+          <Property Name="PATTERN_DESCR" Type="varchar2" MaxLength="500" />
+          <Property Name="FG_CAR_CHAR_VALUE_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="INTERIOR_COLOR" Type="varchar2" MaxLength="100" />
+          <Property Name="FG_PROD_CD" Type="varchar2" Nullable="false" MaxLength="30" />
+          <Property Name="COLOR_CODE" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="COLOR_DESCRIPTION" Type="varchar2" MaxLength="100" />
+          <Property Name="PROD_DESCR" Type="varchar2" MaxLength="500" />
+          <Property Name="ADVICE" Type="varchar2" MaxLength="30" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SYSADM.FG_SEL_SLS_ALLCOL_VW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CST.Selector" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="SelectorEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SelectorPubCars" EntityType="CST.Selector.SelectorPubCar" />
+          <EntitySet Name="SelectorCars" EntityType="CST.Selector.SelectorCar" />
+          <EntitySet Name="SelectorPatterns" EntityType="CST.Selector.SelectorPattern" />
+          <EntitySet Name="SelectorInteriors" EntityType="CST.Selector.SelectorInterior" />
+          <EntitySet Name="SelectorColorAdvices" EntityType="CST.Selector.SelectorColorAdvice" />
+        </EntityContainer>
+        <EntityType Name="SelectorPubCar">
+          <Key>
+            <PropertyRef Name="CarCD" />
+            <PropertyRef Name="MakeCD" />
+            <PropertyRef Name="YearCD" />
+            <PropertyRef Name="ModelCD" />
+            <PropertyRef Name="BodyCD" />
+            <PropertyRef Name="CatalogCD" />
+            <PropertyRef Name="PatternProdCD" />
+            <PropertyRef Name="CatalogSetid" />
+            <PropertyRef Name="PatternProdSetid" />
+          </Key>
+          <Property Type="String" Name="CarCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MakeCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MakeDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="YearCD" Nullable="false" Precision="5" Scale="1" />
+          <Property Type="String" Name="ModelCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModelDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BodyCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BodyDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CatalogCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CatalogDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PatternProdCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CatalogSetid" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PatternProdSetid" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SelectorCar">
+          <Key>
+            <PropertyRef Name="CarCD" />
+            <PropertyRef Name="MakeCD" />
+            <PropertyRef Name="YearCD" />
+            <PropertyRef Name="ModelCD" />
+            <PropertyRef Name="BodyCD" />
+            <PropertyRef Name="CatalogCD" />
+            <PropertyRef Name="PatternProdCD" />
+            <PropertyRef Name="CatalogSetid" />
+            <PropertyRef Name="PatternProdSetid" />
+          </Key>
+          <Property Type="String" Name="CarCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MakeCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MakeDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="YearCD" Nullable="false" Precision="5" Scale="1" />
+          <Property Type="String" Name="ModelCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModelDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BodyCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BodyDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CatalogCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CatalogDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PatternProdCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CatalogSetid" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PatternProdSetid" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SelectorPattern">
+          <Key>
+            <PropertyRef Name="CarCD" />
+            <PropertyRef Name="MakeCD" />
+            <PropertyRef Name="YearCD" />
+            <PropertyRef Name="ModelCD" />
+            <PropertyRef Name="BodyCD" />
+            <PropertyRef Name="CatalogCD" />
+            <PropertyRef Name="PatternProdCD" />
+          </Key>
+          <Property Type="String" Name="CarCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MakeCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MakeDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="YearCD" Nullable="false" Precision="5" Scale="1" />
+          <Property Type="String" Name="ModelCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModelDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BodyCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BodyDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CatalogCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CatalogDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PatternProdCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PatternDescription" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AirbagsDescription" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TrimLevelDescription" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="DrawingID" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="SelectorInterior">
+          <Key>
+            <PropertyRef Name="CarCD" />
+            <PropertyRef Name="MakeCD" />
+            <PropertyRef Name="YearCD" />
+            <PropertyRef Name="ModelCD" />
+            <PropertyRef Name="BodyCD" />
+            <PropertyRef Name="CatalogCD" />
+            <PropertyRef Name="InteriorColorCD" />
+          </Key>
+          <Property Type="String" Name="CarCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MakeCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MakeDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="YearCD" Nullable="false" Precision="5" Scale="1" />
+          <Property Type="String" Name="ModelCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModelDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BodyCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BodyDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CatalogCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CatalogDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PatternProdCD" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PatternDescription" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InteriorColorCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InteriorColorDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SelectorColorAdvice">
+          <Key>
+            <PropertyRef Name="CarCD" />
+            <PropertyRef Name="MakeCD" />
+            <PropertyRef Name="YearCD" />
+            <PropertyRef Name="ModelCD" />
+            <PropertyRef Name="BodyCD" />
+            <PropertyRef Name="CatalogCD" />
+            <PropertyRef Name="InteriorColorCD" />
+            <PropertyRef Name="ProdCD" />
+            <PropertyRef Name="ColorCD" />
+          </Key>
+          <Property Type="String" Name="CarCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MakeCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MakeDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="YearCD" Nullable="false" Precision="5" Scale="1" />
+          <Property Type="String" Name="ModelCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModelDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BodyCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BodyDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CatalogCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CatalogDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PatternProdCD" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PatternDescription" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InteriorColorCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InteriorColorDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProdCD" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ColorCD" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ColorDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProdDescription" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Advice" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CSTSelectorStoreContainer" CdmEntityContainer="SelectorEntities">
+          <EntitySetMapping Name="SelectorPubCars">
+            <EntityTypeMapping TypeName="CST.Selector.SelectorPubCar">
+              <MappingFragment StoreEntitySet="FG_PUBLIC_CAR_VW">
+                <ScalarProperty Name="PatternProdSetid" ColumnName="FG_PROD_SETID" />
+                <ScalarProperty Name="CatalogSetid" ColumnName="FG_CATALOG_SETID" />
+                <ScalarProperty Name="PatternProdCD" ColumnName="FG_PROD_CD" />
+                <ScalarProperty Name="CatalogDescription" ColumnName="FG_CATALOG_DESCRIPTION" />
+                <ScalarProperty Name="CatalogCD" ColumnName="FG_CATALOG_CD" />
+                <ScalarProperty Name="BodyDescription" ColumnName="BODY" />
+                <ScalarProperty Name="BodyCD" ColumnName="FG_BODY_CD" />
+                <ScalarProperty Name="ModelDescription" ColumnName="MODEL" />
+                <ScalarProperty Name="ModelCD" ColumnName="FG_MODEL_CD" />
+                <ScalarProperty Name="YearCD" ColumnName="FG_YEAR_CD" />
+                <ScalarProperty Name="MakeDescription" ColumnName="MAKE" />
+                <ScalarProperty Name="MakeCD" ColumnName="FG_MAKE_CD" />
+                <ScalarProperty Name="CarCD" ColumnName="FG_CAR_CD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SelectorCars">
+            <EntityTypeMapping TypeName="CST.Selector.SelectorCar">
+              <MappingFragment StoreEntitySet="FG_SEL_CAR_VW">
+                <ScalarProperty Name="PatternProdSetid" ColumnName="FG_PROD_SETID" />
+                <ScalarProperty Name="CatalogSetid" ColumnName="FG_CATALOG_SETID" />
+                <ScalarProperty Name="PatternProdCD" ColumnName="FG_PROD_CD" />
+                <ScalarProperty Name="CatalogDescription" ColumnName="FG_CATALOG_DESCRIPTION" />
+                <ScalarProperty Name="CatalogCD" ColumnName="FG_CATALOG_CD" />
+                <ScalarProperty Name="BodyDescription" ColumnName="BODY" />
+                <ScalarProperty Name="BodyCD" ColumnName="FG_BODY_CD" />
+                <ScalarProperty Name="ModelDescription" ColumnName="MODEL" />
+                <ScalarProperty Name="ModelCD" ColumnName="FG_MODEL_CD" />
+                <ScalarProperty Name="YearCD" ColumnName="FG_YEAR_CD" />
+                <ScalarProperty Name="MakeDescription" ColumnName="MAKE" />
+                <ScalarProperty Name="MakeCD" ColumnName="FG_MAKE_CD" />
+                <ScalarProperty Name="CarCD" ColumnName="FG_CAR_CD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SelectorPatterns">
+            <EntityTypeMapping TypeName="CST.Selector.SelectorPattern">
+              <MappingFragment StoreEntitySet="FG_SEL_PATTERN_VW">
+                <ScalarProperty Name="CatalogDescription" ColumnName="FG_CATALOG_DESCRIPTION" />
+                <ScalarProperty Name="DrawingID" ColumnName="DRAWING_IMAGE_ID" />
+                <ScalarProperty Name="TrimLevelDescription" ColumnName="FG_TRIM_LEVEL_DESC" />
+                <ScalarProperty Name="AirbagsDescription" ColumnName="FG_AIRBAGS_DESC" />
+                <ScalarProperty Name="PatternDescription" ColumnName="PATTERN_DESCR" />
+                <ScalarProperty Name="PatternProdCD" ColumnName="PATTERN_PROD_CD" />
+                <ScalarProperty Name="CatalogCD" ColumnName="FG_CATALOG_CD" />
+                <ScalarProperty Name="BodyDescription" ColumnName="BODY" />
+                <ScalarProperty Name="BodyCD" ColumnName="FG_BODY_CD" />
+                <ScalarProperty Name="ModelDescription" ColumnName="MODEL" />
+                <ScalarProperty Name="ModelCD" ColumnName="FG_MODEL_CD" />
+                <ScalarProperty Name="YearCD" ColumnName="FG_YEAR_CD" />
+                <ScalarProperty Name="MakeDescription" ColumnName="MAKE" />
+                <ScalarProperty Name="MakeCD" ColumnName="FG_MAKE_CD" />
+                <ScalarProperty Name="CarCD" ColumnName="FG_CAR_CD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SelectorInteriors">
+            <EntityTypeMapping TypeName="CST.Selector.SelectorInterior">
+              <MappingFragment StoreEntitySet="FG_SEL_INTR_VW">
+                <ScalarProperty Name="InteriorColorDescription" ColumnName="INTERIOR_COLOR" />
+                <ScalarProperty Name="InteriorColorCD" ColumnName="FG_CAR_CHAR_VALUE_CD" />
+                <ScalarProperty Name="PatternDescription" ColumnName="PATTERN_DESCR" />
+                <ScalarProperty Name="PatternProdCD" ColumnName="PATTERN_PROD_CD" />
+                <ScalarProperty Name="CatalogDescription" ColumnName="FG_CATALOG_DESCRIPTION" />
+                <ScalarProperty Name="CatalogCD" ColumnName="FG_CATALOG_CD" />
+                <ScalarProperty Name="BodyDescription" ColumnName="BODY" />
+                <ScalarProperty Name="BodyCD" ColumnName="FG_BODY_CD" />
+                <ScalarProperty Name="ModelDescription" ColumnName="MODEL" />
+                <ScalarProperty Name="ModelCD" ColumnName="FG_MODEL_CD" />
+                <ScalarProperty Name="YearCD" ColumnName="FG_YEAR_CD" />
+                <ScalarProperty Name="MakeDescription" ColumnName="MAKE" />
+                <ScalarProperty Name="MakeCD" ColumnName="FG_MAKE_CD" />
+                <ScalarProperty Name="CarCD" ColumnName="FG_CAR_CD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SelectorColorAdvices">
+            <EntityTypeMapping TypeName="CST.Selector.SelectorColorAdvice">
+              <MappingFragment StoreEntitySet="FG_SEL_RECOM_VW">
+                <ScalarProperty Name="Advice" ColumnName="ADVICE" />
+                <ScalarProperty Name="ProdDescription" ColumnName="PROD_DESCR" />
+                <ScalarProperty Name="ColorDescription" ColumnName="COLOR_DESCRIPTION" />
+                <ScalarProperty Name="ColorCD" ColumnName="COLOR_CODE" />
+                <ScalarProperty Name="ProdCD" ColumnName="FG_PROD_CD" />
+                <ScalarProperty Name="InteriorColorDescription" ColumnName="INTERIOR_COLOR" />
+                <ScalarProperty Name="InteriorColorCD" ColumnName="FG_CAR_CHAR_VALUE_CD" />
+                <ScalarProperty Name="PatternDescription" ColumnName="PATTERN_DESCR" />
+                <ScalarProperty Name="PatternProdCD" ColumnName="PATTERN_PROD_CD" />
+                <ScalarProperty Name="CatalogDescription" ColumnName="FG_CATALOG_DESCRIPTION" />
+                <ScalarProperty Name="CatalogCD" ColumnName="FG_CATALOG_CD" />
+                <ScalarProperty Name="BodyDescription" ColumnName="BODY" />
+                <ScalarProperty Name="BodyCD" ColumnName="FG_BODY_CD" />
+                <ScalarProperty Name="ModelDescription" ColumnName="MODEL" />
+                <ScalarProperty Name="ModelCD" ColumnName="FG_MODEL_CD" />
+                <ScalarProperty Name="YearCD" ColumnName="FG_YEAR_CD" />
+                <ScalarProperty Name="MakeDescription" ColumnName="MAKE" />
+                <ScalarProperty Name="MakeCD" ColumnName="FG_MAKE_CD" />
+                <ScalarProperty Name="CarCD" ColumnName="FG_CAR_CD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="SelectorModel">
+        <EntityTypeShape EntityType="CST.Selector.SelectorPubCar" Width="2.125" PointX="4.125" PointY="0.5" Height="3.1340950520833331" />
+        <EntityTypeShape EntityType="CST.Selector.SelectorCar" Width="3" PointX="0.75" PointY="0.5" Height="3.1340950520833331" />
+        <EntityTypeShape EntityType="CST.Selector.SelectorPattern" Width="1.875" PointX="0.75" PointY="4.25" Height="3.7109993489583388" />
+        <EntityTypeShape EntityType="CST.Selector.SelectorInterior" Width="1.875" PointX="2.875" PointY="4.25" Height="3.7109993489583317" />
+        <EntityTypeShape EntityType="CST.Selector.SelectorColorAdvice" Width="2" PointX="5.25" PointY="4.25" Height="4.6725065104166674" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

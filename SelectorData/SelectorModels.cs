@@ -1,0 +1,96 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace CST.Selector
+{
+    public class MakeModel : IMake
+    {
+        public string MakeCD { get; set; }
+        public string MakeDescription { get; set; }
+        public string UrlReturn { get; set; }
+    }
+    public class YearModel : MakeModel, IYear
+    {
+        public decimal? YearCD { get; set; }
+    }
+    public class ModelModel : YearModel, IModel
+    {
+        public string ModelCD { get; set; }
+        public string ModelDescription { get; set; }
+    }
+    public class CarModel : ModelModel, ICar
+    {
+        public string BodyCD { get; set; }
+        public string BodyDescription { get; set; }
+        public string CarCD { get; set; }
+    }
+    public class CatalogModel : CarModel, ICarCtlg 
+    {
+        public string CatalogCD { get; set; }
+        public string CatalogDescription { get; set; }
+    }
+    public class PatternModel : CatalogModel, ICarPtrn
+    {
+        public string PatternProdCD { get; set; }
+        public string PatternDescription { get; set; }
+        public string AirbagsDescription { get; set; }
+        public string NumberOfRows { get; set; }
+        public decimal? DrawingID { get; set; }
+    }
+    public class IntrColorModel : CatalogModel, ICarPtrn
+    {
+        public string PatternProdCD { get; set; }
+        public string PatternDescription { get; set; }
+        public string InteriorColorCD { get; set; }
+        public string InteriorColorDescription { get; set; }
+    }
+    public class ColorAdviceModel : IntrColorModel, IColorAdvice
+    {
+        public string Advice { get; set; }
+        public string ProdCD { get; set; }
+        public string ProdDescription { get; set; }
+        public string ColorCD { get; set; }
+        public string ColorDescription { get; set; }
+    }
+
+    public abstract class SelectorViewModel : ColorAdviceModel {}
+
+    public class NoResultsViewModel : SelectorViewModel
+    {
+        public string Message { get; set; }
+    }
+    public class MakeViewModel : SelectorViewModel
+    {
+        public IEnumerable<MakeModel> Makes { get; set; }
+    }
+    public class YearViewModel : SelectorViewModel
+    {
+        public IEnumerable<YearModel> Years  { get; set; }
+    }
+    public class ModelViewModel : SelectorViewModel
+    {
+        public IEnumerable<ModelModel> Models  { get; set; }
+    }
+    public class CarViewModel : SelectorViewModel
+    {
+        public IEnumerable<CarModel> Cars  { get; set; }
+    }
+    public class CatalogViewModel : SelectorViewModel
+    {
+        public IEnumerable<CatalogModel> Catalogs { get; set; }
+    }
+    public class PatternViewModel : SelectorViewModel
+    {
+        public IEnumerable<PatternModel> Patterns { get; set; }
+    }
+    public class IntrColorViewModel : SelectorViewModel
+    {
+        public IEnumerable<IntrColorModel> IntrColors { get; set; }
+    }
+    public class ColorAdviceViewModel : SelectorViewModel
+    {
+        public IEnumerable<ColorAdviceModel> Colors { get; set; }
+    }
+}
